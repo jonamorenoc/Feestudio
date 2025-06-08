@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><link rel="stylesheet" href="style.css">
-
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>feestudio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
 </head>
 <body>
+  <div id="tsparticles"></div>
   <h1>feestudio.com</h1>
+
+  <script>
+    tsParticles.load("tsparticles", {
+      background: { color: "#000" },
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: "repulse" },
+          resize: true,
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 }
+        }
+      },
+      particles: {
+        color: { value: "#ff4fcf" },
+        links: {
+          color: "#ff4fcf",
+          distance: 150,
+          enable: true,
+          opacity: 0.4,
+          width: 1
+        },
+        collisions: { enable: false },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: { default: "bounce" },
+          random: true,
+          speed: 1,
+          straight: false
+        },
+        number: {
+          density: { enable: true, area: 800 },
+          value: 50
+        },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 4 } }
+      },
+      detectRetina: true
+    });
+  </script>
 </body>
 </html>
-
-
-}
